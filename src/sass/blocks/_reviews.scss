@@ -1,0 +1,37 @@
+.review {
+    padding-bottom: 70px;
+    &
+    &__items {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 49px;
+    }
+    &__picture {
+        margin-right: 62px;
+    }
+    &__img {
+        display: block;
+    }
+    &__subheader {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0d0d0d;
+        margin-bottom: 19px;
+        span {
+            font-size: 14px;
+            font-weight: 300;
+            color: #646464;
+        }
+    }
+    &__content {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: normal;
+        color: #0d0d0d;
+    }
+}
