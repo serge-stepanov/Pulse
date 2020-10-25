@@ -28,6 +28,9 @@
         line-height: normal;
         text-align: center;
         color: #ffffff;
+        &:hover {
+            color: #ffffff;
+        }
     }
     &__social {
         margin-top: 38px;
@@ -42,6 +45,10 @@
         border: solid 2px #ffffff;
         border-radius: 100%;
         margin: 0 15px;
+        transition: 0.5s all;
+        &:hover {
+            background-color: darkmagenta;
+        } 
         img {
             display: block;
             margin: 0 auto;
