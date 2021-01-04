@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // Slider
     $('.slider__inner').slick({
         speed: 1200,
         centerMode: true,
@@ -16,6 +17,7 @@ $(document).ready(function(){
         ]
       });
 
+    // Tabs
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
         .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -28,13 +30,14 @@ $(document).ready(function(){
                 e.preventDefault();
                 $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
                 $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-            })
+            });
         });
-    };
+    }
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
+    // Modal
     $('[data-windows=consultation]').on('click', function() {
         $('.overlay, #consultation').fadeIn('slow');
     });
@@ -49,6 +52,7 @@ $(document).ready(function(){
         });
     });
 
+    // Validation
     function validationForm(form) {
         $(form).validate({
             rules: {
@@ -64,19 +68,19 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "Пожалуйста, введите своё имя",
-                    minlength: jQuery.validator.format("Введите не менее {0} букв!")
+                    required: "Please enter your name",
+                    minlength: jQuery.validator.format("Enter at least {0} letters!")
                 },
-                phone: "Пожалуйста, введите свой номер телефона",
+                phone: "Please enter your phone number",
                 email: {
-                  required: "Пожалуйста, введите свой e-mail",
-                  email: "Ваш адрес должен иметь следующий формат: name@domain.com"
+                  required: "Please enter your e-mail",
+                  email: "Your e-mail should be in the following format: name@domain.com"
                 }
               }
             
         });
           
-    };
+    }
 
     validationForm('#order form');
     validationForm('#consultation form');

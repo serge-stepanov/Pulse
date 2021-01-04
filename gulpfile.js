@@ -30,7 +30,7 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
     return gulp.src('src/js/**/*.js')
-        .pipe(gulp.dest("distr/js"));
+        .pipe(gulp.dest("distr/js"))
         .pipe(browserSync.stream());
 });
 
